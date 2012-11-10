@@ -11,3 +11,12 @@ set :runner, "deploy"
 set :deploy_to, "/var/www/bridge_city_lacrosse"
 
 server "ryanclosner.com", :app
+
+namespace :wordpress do
+  task :symlink, :roles => :app do
+    run "ln -nfs #{shared_path}/uploads #{release_path}/wp-content/uploads"
+    run "ln -nfs #{shared_path}/local-config.php #{release_path}/wp-config.php"
+  end
+end
+
+after "deploy:symlink", "wordpress:symlink"
