@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<wp_option_tree>
+  <row>
+    <id>1</id>
+    <item_id>general_default</item_id>
+    <item_title>General</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>1</item_sort>
+  </row>
+  <row>
+    <id>2</id>
+    <item_id>vn_logo</item_id>
+    <item_title>Custom Top Logo</item_title>
+    <item_desc>Upload your top logo via WordPress Media Library and paste the url to that image here.  Recommended size is 237px x 88px.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>2</item_sort>
+  </row>
+  <row>
+    <id>3</id>
+    <item_id>vn_custom_favicon</item_id>
+    <item_title>Custom Favicon</item_title>
+    <item_desc>Upload your top logo via WordPress Media Library and paste the url to that image here.  Recommended size is 16px x 16px.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>3</item_sort>
+  </row>
+  <row>
+    <id>4</id>
+    <item_id>vn_copyright</item_id>
+    <item_title>Custom Copyright</item_title>
+    <item_desc>HTML is allowed here.  Enter your copyright information that will appear in the footer of every page.  You do not need to enter the copyright symbol - this is done automatically.</item_desc>
+    <item_type>textarea</item_type>
+    <item_options>5</item_options>
+    <item_sort>4</item_sort>
+  </row>
+  <row>
+    <id>5</id>
+    <item_id>vn_readmore</item_id>
+    <item_title>Read More Button Text</item_title>
+    <item_desc>Enter the text you want to appear on all your &amp;#039;more&amp;#039; buttons.  Standard text used generally is &amp;quot;Read More&amp;quot;.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>5</item_sort>
+  </row>
+  <row>
+    <id>43</id>
+    <item_id>vn_accentcolor</item_id>
+    <item_title>Choose Your Accent Color</item_title>
+    <item_desc>What was &amp;quot;red&amp;quot; on the live preview will change to whatever accent color you choose here.</item_desc>
+    <item_type>colorpicker</item_type>
+    <item_options></item_options>
+    <item_sort>6</item_sort>
+  </row>
+  <row>
+    <id>6</id>
+    <item_id>vn_google_analytics</item_id>
+    <item_title>Tracking Code</item_title>
+    <item_desc>Enter the tracking code here that will go in the footer of every page for your analytic reporting.</item_desc>
+    <item_type>textarea</item_type>
+    <item_options>5</item_options>
+    <item_sort>7</item_sort>
+  </row>
+  <row>
+    <id>7</id>
+    <item_id>vn_custom_css</item_id>
+    <item_title>Custom CSS</item_title>
+    <item_desc>Enter your custom css here that will over ride the stylesheet.</item_desc>
+    <item_type>css</item_type>
+    <item_options>10</item_options>
+    <item_sort>8</item_sort>
+  </row>
+  <row>
+    <id>15</id>
+    <item_id>homepage_settings</item_id>
+    <item_title>Homepage Settings</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>9</item_sort>
+  </row>
+  <row>
+    <id>16</id>
+    <item_id>vn_todaymessage</item_id>
+    <item_title>Welcome Message</item_title>
+    <item_desc>Use this area to place a quote or a message you want your reader&amp;#039;s to see on your homepage under the slider.</item_desc>
+    <item_type>textarea</item_type>
+    <item_options>5</item_options>
+    <item_sort>10</item_sort>
+  </row>
+  <row>
+    <id>17</id>
+    <item_id>vn_1stcolumntitle</item_id>
+    <item_title>1st Column Title</item_title>
+    <item_desc>Enter the title for your 1st column heading.  This is a dynamic loop and will pull in your latest 2 classes.  Example: Courses.  **note this will only be used if the Home-Loop page template was chosen as your homepage template.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>11</item_sort>
+  </row>
+  <row>
+    <id>44</id>
+    <item_id>vn_homclassmore</item_id>
+    <item_title>Text Link Under Classes Schedule</item_title>
+    <item_desc>Enter the text you want to display on the homepage under each &amp;quot;class&amp;quot; for read more.  Example MORE DETAILS + TIMES</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>12</item_sort>
+  </row>
+  <row>
+    <id>20</id>
+    <item_id>vn_2ndcolumntitle</item_id>
+    <item_title>2nd Column Title</item_title>
+    <item_desc>Enter the title for your 2nd column heading.  Example: Latest News.  **note this will only be used if the Home-Loop page template was chosen as your homepage template.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>13</item_sort>
+  </row>
+  <row>
+    <id>21</id>
+    <item_id>vn_seccat</item_id>
+    <item_title>2nd Column Loop</item_title>
+    <item_desc>Choose your category loop for the top row on the home page, 2nd column.  You will see the latest 2 posts.</item_desc>
+    <item_type>category</item_type>
+    <item_options></item_options>
+    <item_sort>14</item_sort>
+  </row>
+  <row>
+    <id>24</id>
+    <item_id>vn_3rdcolumntitle</item_id>
+    <item_title>3rd Column Image Upload</item_title>
+    <item_desc>Upload an image via WordPress Media Library and paste the url to that image here.  Recommended size is 300px x 411px.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>15</item_sort>
+  </row>
+  <row>
+    <id>25</id>
+    <item_id>vn_thdcat</item_id>
+    <item_title>3rd Column Image Upload Link</item_title>
+    <item_desc>Enter a url you want the 3rd column image to link to (it will open the url up in the same window).</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>16</item_sort>
+  </row>
+  <row>
+    <id>28</id>
+    <item_id>contact_information</item_id>
+    <item_title>Contact Information</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>17</item_sort>
+  </row>
+  <row>
+    <id>45</id>
+    <item_id>vn_contactsidebartitle</item_id>
+    <item_title>Contact Sidebar Title</item_title>
+    <item_desc>Enter a title for the Contact Sidebar Heading on the Contact page template.  Example: Contact Me</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>18</item_sort>
+  </row>
+  <row>
+    <id>46</id>
+    <item_id>vn_contactphonesubheading</item_id>
+    <item_title>Contact Phone Number Sub Heading</item_title>
+    <item_desc>Enter a sub heading that will appear above the dynamically drawn phone number, fax number and click-able email address entered below.  Example: Reach Out</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>19</item_sort>
+  </row>
+  <row>
+    <id>29</id>
+    <item_id>vn_companyphone</item_id>
+    <item_title>Company Phone Number</item_title>
+    <item_desc>This information will be dynamically pulled into your header and your contact page.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>20</item_sort>
+  </row>
+  <row>
+    <id>30</id>
+    <item_id>vn_companyfax</item_id>
+    <item_title>Company Fax Number</item_title>
+    <item_desc>This information will be dynamically pulled into your contact page sidebar.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>21</item_sort>
+  </row>
+  <row>
+    <id>31</id>
+    <item_id>vn_companyemailaddress</item_id>
+    <item_title>Company Email Address</item_title>
+    <item_desc>This information will be dynamically pulled into your contact page sidebar and will open up the user&amp;#039;s email program automatically placing your email address in the To: field of the email.</item_desc>
+    <item_type>input</item_type>
+    <item_options>5</item_options>
+    <item_sort>22</item_sort>
+  </row>
+  <row>
+    <id>47</id>
+    <item_id>vn_contacthourssubheading</item_id>
+    <item_title>Contact Hours Sub Heading</item_title>
+    <item_desc>Enter a sub heading that will appear above the dynamically drawn hours information entered below.  Example: Hours</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>23</item_sort>
+  </row>
+  <row>
+    <id>13</id>
+    <item_id>vn_info_box</item_id>
+    <item_title>Hours</item_title>
+    <item_desc>Enter some brief text that will appear in your header and your contact page template sidebar for your hours of operation.  
+Example:
+Monday - Thursday 5:30AM - 10PM &amp;lt;br /&amp;gt;
+Friday 5:30AM - 9PM &amp;lt;br /&amp;gt;
+Saturday - Sunday 8AM - 6PM</item_desc>
+    <item_type>textarea</item_type>
+    <item_options>5</item_options>
+    <item_sort>24</item_sort>
+  </row>
+  <row>
+    <id>48</id>
+    <item_id>vn_contactlocationsubheading</item_id>
+    <item_title>Contact Location Sub Heading</item_title>
+    <item_desc>Enter a sub heading that will appear above the dynamically drawn address, city, state and zip entered below.  Example: Location</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>25</item_sort>
+  </row>
+  <row>
+    <id>32</id>
+    <item_id>vn_companyaddress</item_id>
+    <item_title>Company Street Address</item_title>
+    <item_desc>This information will be dynamically pulled into your contact page sidebar.  Example: 123 Anywhere Street, Suite 200</item_desc>
+    <item_type>textarea</item_type>
+    <item_options>5</item_options>
+    <item_sort>26</item_sort>
+  </row>
+  <row>
+    <id>33</id>
+    <item_id>vn_companycity</item_id>
+    <item_title>Company City, State and Zip</item_title>
+    <item_desc>This information will be dynamically pulled into your contact page sidebar.  Example: Any City, FL  12345</item_desc>
+    <item_type>textarea</item_type>
+    <item_options>5</item_options>
+    <item_sort>27</item_sort>
+  </row>
+  <row>
+    <id>35</id>
+    <item_id>social</item_id>
+    <item_title>Social</item_title>
+    <item_desc></item_desc>
+    <item_type>heading</item_type>
+    <item_options></item_options>
+    <item_sort>28</item_sort>
+  </row>
+  <row>
+    <id>36</id>
+    <item_id>vn_facebook</item_id>
+    <item_title>Facebook Link</item_title>
+    <item_desc>Enter the url to your Facebook page.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>29</item_sort>
+  </row>
+  <row>
+    <id>37</id>
+    <item_id>vn_twitter</item_id>
+    <item_title>Twitter Link</item_title>
+    <item_desc>Enter the url to your Twitter page.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>30</item_sort>
+  </row>
+  <row>
+    <id>38</id>
+    <item_id>vn_flickr</item_id>
+    <item_title>Flickr Link</item_title>
+    <item_desc>Enter the url to your Flickr page.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>31</item_sort>
+  </row>
+  <row>
+    <id>40</id>
+    <item_id>vn_pinterest</item_id>
+    <item_title>Pinterest Link</item_title>
+    <item_desc>Enter the url to your Pinterest page.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>32</item_sort>
+  </row>
+  <row>
+    <id>41</id>
+    <item_id>vn_googlelink</item_id>
+    <item_title>Google Plus Link</item_title>
+    <item_desc>Enter the url to your Google Plus account.</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>33</item_sort>
+  </row>
+  <row>
+    <id>42</id>
+    <item_id>vn_twitter_username</item_id>
+    <item_title>Twitter Username</item_title>
+    <item_desc>Enter your twitter username is this format (twsjonathan) to dynamically draw in 1 tweet on your homepage and if your contact page (and anywhere else you may use the twitter code supplied by the documentation).</item_desc>
+    <item_type>input</item_type>
+    <item_options></item_options>
+    <item_sort>34</item_sort>
+  </row>
+</wp_option_tree>
