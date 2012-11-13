@@ -151,7 +151,16 @@ h3 a:hover, h4 a:hover, h6 a:hover, .homeclass a:hover, a, a.more-link, a:hover,
 .quote {
 	border-left:6px solid <?php echo ($accentcolor); ?>;
 	}
-	
+
+<?php 
+if ( function_exists( 'get_option_tree') ) {
+  $header_background = get_option_tree( 'header_background' );
+}
+?>
+
+#outer_wrapper {
+  background: <?php echo($header_background); ?>;
+}
 
 
 </style>
