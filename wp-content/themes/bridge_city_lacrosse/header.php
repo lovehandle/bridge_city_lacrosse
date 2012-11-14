@@ -50,10 +50,13 @@
         <div id="header-top-wrapper" class="container">
           <a href="/">
             <h1 id="header-top-logo">
-              <img src="http://localhost/~ryan/bridge_city_lacrosse/wp-content/uploads/logo.png"/>
-              <?php if ( function_exists('get_option_tree') ) {
+              <?php if ( function_exists('get_option_tree') ) { 
                 $logo = get_option_tree('logo');
-              }?>
+              } ?>
+
+              <?php if ( isset($logo) ) { ?>
+                <img src="<?php echo($logo); ?>"/>
+              <?php } ?>
             </h1>
           </a>
         </div>
