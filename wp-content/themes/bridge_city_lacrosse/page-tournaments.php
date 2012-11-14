@@ -1,10 +1,10 @@
 <?php
 /*
-Template Name: Lessons
+Template Name: Tournaments
 */
 ?>
 
-<?php $widget_section_name = "lessons_sidebar_section"; ?>
+<?php $widget_section_name = "tournament_sidebar_section"; ?>
 
 <?php get_header(); ?>
 <?php include(locate_template('content-sidebar-left.php')); ?>

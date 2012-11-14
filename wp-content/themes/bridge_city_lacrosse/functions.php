@@ -104,10 +104,10 @@ function bones_register_sidebars() {
     ));
 
      register_sidebar(array(
-	'id' => 'blog_sidebar_section',
-	'name' => 'Blog Sidebar Section',
+	'id' => 'default_sidebar_section',
+	'name' => 'Default Sidebar Section',
 	'description' => 'The sidebar section of the Blog.',
-	'before_widget' => '<article id="%1$s" class="sidebar %2$s span2">',
+	'before_widget' => '<article id="%1$s" class="widget %2$s">',
 	'after_widget' => '</article>',
 	'before_title' => '<h4 class="widget-title">',
 	'after_title' => '</h4>',
@@ -117,7 +117,7 @@ function bones_register_sidebars() {
 	'id' => 'contact_sidebar_section',
 	'name' => 'Contact Sidebar Section',
 	'description' => 'The sidebar section of the Contact.',
-	'before_widget' => '<article id="%1$s" class="sidebar %2$s span2">',
+	'before_widget' => '<article id="%1$s" class="widget %2$s">',
 	'after_widget' => '</article>',
 	'before_title' => '<h4 class="widget-title">',
 	'after_title' => '</h4>',
@@ -127,7 +127,7 @@ function bones_register_sidebars() {
 	'id' => 'development_teams_sidebar_section',
 	'name' => 'Development Teams Sidebar Section',
 	'description' => 'The sidebar section of the Development Teams.',
-	'before_widget' => '<article id="%1$s" class="sidebar %2$s span2">',
+	'before_widget' => '<article id="%1$s" class="widget %2$s">',
 	'after_widget' => '</article>',
 	'before_title' => '<h4 class="widget-title">',
 	'after_title' => '</h4>',
@@ -137,12 +137,31 @@ function bones_register_sidebars() {
 	'id' => 'select_teams_sidebar_section',
 	'name' => 'Select Teams Sidebar Section',
 	'description' => 'The sidebar section of the Select Teams.',
-	'before_widget' => '<article id="%1$s" class="sidebar %2$s span2">',
+	'before_widget' => '<article id="%1$s" class="widget %2$s">',
 	'after_widget' => '</article>',
 	'before_title' => '<h4 class="widget-title">',
 	'after_title' => '</h4>',
     ));
 
+     register_sidebar(array(
+	'id' => 'lessons_sidebar_section',
+	'name' => 'Lessons Sidebar Section',
+	'description' => 'The sidebar section of the Lessons.',
+	'before_widget' => '<article id="%1$s" class="widget %2$s">',
+	'after_widget' => '</article>',
+	'before_title' => '<h4 class="widget-title">',
+	'after_title' => '</h4>',
+    ));
+
+     register_sidebar(array(
+	'id' => 'tournaments_sidebar_section',
+	'name' => 'Tournaments Sidebar Section',
+	'description' => 'The sidebar section of the Tournaments.',
+	'before_widget' => '<article id="%1$s" class="widget %2$s">',
+	'after_widget' => '</article>',
+	'before_title' => '<h4 class="widget-title">',
+	'after_title' => '</h4>',
+    ));
 
     /*
     to add more sidebars or widgetized areas, just copy
@@ -185,6 +204,26 @@ function bones_widgets($widget_name) {
         </div>
       <?php endif; ?>
     <?php endif; ?>
+  <?php
+}
+
+function bones_pre_content() {
+  ?>
+  <?php if (has_post_thumbnail( $post->ID ) ): ?>
+    <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+    <div id="pre-content" style="background-image: url('<?php echo $image[0]; ?>')"></div>
+  <?php endif; ?>
+  <?php
+}
+
+function bones_page_content() {
+  ?>
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <?php get_template_part('post-content'); ?>
+  <?php endwhile; ?>
+  <?php else : ?>
+    <p>There has been an error. Please try again later.</p>
+  <?php endif; ?>
   <?php
 }
 

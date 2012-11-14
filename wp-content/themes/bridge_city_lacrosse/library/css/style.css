@@ -5,12 +5,12 @@
   background-color: white;
 }
 .sidebar {
+  margin-left: 0;
+}
+.sidebar .widget {
   background-color: #FFF;
   padding: 20px;
-}
-.widget ul {
-  margin: 20px;
-  list-style: none;
+  width: 80%;
 }
 #slider {
   padding: 20px;
@@ -43,9 +43,6 @@
 #middle-section article div {
   padding: 20px 20px 40px;
   background-color: white;
-}
-#blog-sidebar {
-  margin-left: 0;
 }
 .post-header {
   border: none;
