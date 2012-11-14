@@ -52,8 +52,7 @@
             <h1 id="header-top-logo">
             
               <?php if ( function_exists('get_option_tree') ) { 
-                $logo = get_option_tree('logo');
-                $logo_url  = get_attachment_link($logo->ID);
+                $logo_url = get_option_tree('logo_url');
               } ?>
               <?php if ( isset($logo_url) ) { ?>
                 <img src="<?php echo($logo_url); ?>"/>
