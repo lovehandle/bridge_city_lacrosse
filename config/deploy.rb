@@ -17,10 +17,6 @@ namespace :wordpress do
     run "ln -nfs #{shared_path}/uploads #{release_path}/wp-content/uploads"
     run "ln -nfs #{shared_path}/local-config.php #{release_path}/wp-config.php"
   end
-
-  task :chmod, :roles => :app do
-    run 
-  end
 end
 
 after "deploy:symlink", "wordpress:symlink"
