@@ -32,14 +32,9 @@
 		<?php wp_head(); ?>
 
     <style type="text/css">
-      <?php if ( function_exists('get_option_tree') ) {
-        $body_background_url = get_option_tree('body_background_url');
-      } ?>
-      <?php if ( isset($body_background_url) ) { ?>
-        body {
-          background-image: url('<?php echo($body_background_url); ?>')
-        } 
-      <?php } ?>
+      body {
+        background-image: url("<?php bloginfo('template_directory'); ?>/library/images/bground.jpg");
+      }
 
       <?php if ( function_exists('get_option_tree') ) { 
         $accent_color = get_option_tree('accent_color');
