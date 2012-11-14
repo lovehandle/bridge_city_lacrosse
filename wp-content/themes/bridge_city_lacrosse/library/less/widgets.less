@@ -1,0 +1,25 @@
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  box-shadow:         @style @c;
+  -webkit-box-shadow: @style @c;
+  -moz-box-shadow:    @style @c;
+}
+
+.content {
+  .box-shadow(0 2px 0, #DDD);
+  background-color: white;
+}
+
+.sidebar {
+  background-color: #FFF;
+  padding: 20px;
+}
+
+.widget {
+  ul {
+    margin: 20px;
+    list-style: none;
+    li {
+    
+    }
+  }
+}
