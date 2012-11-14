@@ -108,6 +108,9 @@ h6 {
   text-shadow: 0 2px 0 #D4D4D4;
   text-transform: uppercase;
 }
+a {
+  color: #d11313;
+}
 #header {
   border-top: 3px solid #fff;
 }

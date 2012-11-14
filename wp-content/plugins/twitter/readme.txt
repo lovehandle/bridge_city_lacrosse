@@ -1,10 +1,9 @@
-=== Twitter JS ===
-Contributors: Milky Interactive
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9246512
+=== Twitter ===
+Contributors: Ryan Closner
 Tags: social, twitter, javascript, widget
 Requires at least: 3.0
 Tested up to: 3.2.1
-Stable tag: 0.2
+Stable tag: 0.1
 
 This plugin adds a widget that get (in Javascript) the last tweets from a public timeline.
 
@@ -12,9 +11,7 @@ This plugin adds a widget that get (in Javascript) the last tweets from a public
 
 This plugin adds a widget that get (in Javascript) the last tweets from a public timeline.
 
-
-Available languages : english, french
-
+Available languages : english
 
 == Installation ==
 
@@ -22,17 +19,12 @@ Available languages : english, french
    2. Upload it on your FTP (in /wp-content/plugins/ folder) or proceed to automatic installation
    3. Activate the plugin
    4. Go to Appearance > Widgets
-   5. Add "Twitter JS" widget to a sidebar
+   5. Add "Twitter" widget to a sidebar
    6. Adjust settings
    7. Save settings
    8. Go back to your blog: you have your widget up & running!
-
 
 == Changelog ==
 
 = 0.1 =
 * First release
-
-= 0.2 =
-* Added english language
-* Included & minified Remys' twitterlib, gained 7Kb
