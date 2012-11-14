@@ -6,12 +6,15 @@ Template Name: Home
 
 <?php get_header(); ?>
 
-<section id="content" role="main">
+<?php if (function_exists('responsive_slider') ) { ?>
   <div id="slider">
     <div id="slider-wrapper" class="container">
-      <?php if (function_exists('responsive_slider')) { responsive_slider(); } ?>
+      <?php responsive_slider();  ?>
     </div>
   </div>
+<?php } ?>
+
+<section id="content" role="main">
 
   <?php if ( function_exists('get_option_tree') ) {
     $home_tagline = get_option_tree('home_tagline');
