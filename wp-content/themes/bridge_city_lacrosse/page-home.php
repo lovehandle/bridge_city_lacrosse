@@ -6,12 +6,18 @@ Template Name: Home
 
 <?php get_header(); ?>
 
-<?php if (function_exists('responsive_slider') ) { ?>
-  <div id="slider">
-    <div id="slider-wrapper" class="container">
-      <?php responsive_slider();  ?>
+<?php if ( function_exists('get_option_tree') ) {
+  $display_slider = get_option_tree('display_slider');
+} ?>
+
+<?php if ( isset($display_slider) && $display_slider == "true" ) { ?>
+  <?php if (function_exists('responsive_slider') ) { ?>
+    <div id="slider">
+      <div id="slider-wrapper" class="container">
+        <?php responsive_slider();  ?>
+      </div>
     </div>
-  </div>
+  <?php } ?>
 <?php } ?>
 
 <section id="content" role="main">
