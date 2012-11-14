@@ -51,31 +51,23 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   li {
-    text-transform: uppercase;
-    float: left;
     height: 50px;
-
-    a {
-      color: #FFF;
-      padding: 15px;
-      text-decoration: none;
-      font-size: 11px;
-      font-family: Muli, sans-serif;
-      display: block;
-    }
+    background-color: @grey-color;
+    color: #FFF;
+    float: left;
+    position: relative;
 
     &.current_page_item, &:hover {
+      color: @grey-color;
       background-color: #bfbfbf;
-
-      a {
+      > a {
         color: @grey-color;
         background-color: #bfbfbf;
       }
-
     }
 
     &:hover {
-      ul.sub-menu {
+      > ul {
         opacity: 1;
         height: auto;
         transition: opacity 0.5s ease-out;
@@ -83,15 +75,36 @@ h1, h2, h3, h4, h5, h6 {
         -webkit-transition: opacity 0.5s ease-out;
         -o-transition: opacity 0.5s ease-out;
       }
-    }
 
-    ul.sub-menu {
-      opacity: 0;
-      height: 0;
-      overflow: hidden;
-      li {
-        float: none;
-      }
+    }
+  }
+
+  a {
+    display: block;
+    padding: 15px;
+    color: #FFF;
+    background-color: @grey-color;
+    font-family: Muli, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+
+    &:hover {
+      color: @grey-color;
+      background-color: #fbfbfb;
+    }
+  }
+
+  ul.sub-menu {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+
+    li {
+      float: none;
+      width: 200px;
     }
   }
 }
