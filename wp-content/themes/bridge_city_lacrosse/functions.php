@@ -1,5 +1,4 @@
-<?php
-/*
+<?php /*
 Author: Eddie Machado
 URL: htp://themble.com/bones/
 
@@ -123,6 +122,27 @@ function bones_register_sidebars() {
 	'before_title' => '<h4 class="widget-title">',
 	'after_title' => '</h4>',
     ));
+
+     register_sidebar(array(
+	'id' => 'development_teams_sidebar_section',
+	'name' => 'Development Teams Sidebar Section',
+	'description' => 'The sidebar section of the Development Teams.',
+	'before_widget' => '<article id="%1$s" class="widget %2$s span4">',
+	'after_widget' => '</article>',
+	'before_title' => '<h4 class="widget-title">',
+	'after_title' => '</h4>',
+    ));
+
+     register_sidebar(array(
+	'id' => 'select_teams_sidebar_section',
+	'name' => 'Select Teams Sidebar Section',
+	'description' => 'The sidebar section of the Select Teams.',
+	'before_widget' => '<article id="%1$s" class="widget %2$s span4">',
+	'after_widget' => '</article>',
+	'before_title' => '<h4 class="widget-title">',
+	'after_title' => '</h4>',
+    ));
+
 
     /*
     to add more sidebars or widgetized areas, just copy

@@ -30,6 +30,18 @@
     </script>
 
 		<?php wp_head(); ?>
+
+    <style type="text/css">
+      <?php if ( function_exists('get_option_tree') ) { 
+        $accent_color = get_option_tree('accent_color');
+      } ?>
+
+      <?php if ( isset($accent_color) ) { ?>
+        #header-top {
+          background-color: <?php echo($accent_color); ?> 
+        } 
+      <?php } ?>
+    </style>
 	</head>
 
   <body <?php body_class(); ?>>
@@ -38,7 +50,10 @@
         <div id="header-top-wrapper" class="container">
           <a href="/">
             <h1 id="header-top-logo">
-              <img src="http://mythemepreviews.com/fitness/wp-content/uploads/2012/07/top_logo.png"/>
+              <img src="http://localhost/~ryan/bridge_city_lacrosse/wp-content/uploads/logo.png"/>
+              <?php if ( function_exists('get_option_tree') ) {
+                $logo = get_option_tree('logo');
+              }?>
             </h1>
           </a>
         </div>
