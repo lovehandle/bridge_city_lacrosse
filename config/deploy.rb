@@ -6,6 +6,7 @@ set :repository,  "git@github.com:rclosner/bridge_city_lacrosse"
 set :branch, "master"
 
 set :user, "deploy"
+set :group, "www-data"
 set :use_sudo, false
 set :runner, "deploy"
 set :deploy_to, "/var/www/bridge_city_lacrosse"
