@@ -13,11 +13,17 @@ Template Name: Home
     </div>
   </div>
 
-  <div id="message">
-    <div id="message-wrapper" class="container">
-      <h1>Some fantastic tagline that we'll think of later.</h1>
+  <?php if ( function_exists('get_option_tree') ) {
+    $home_tagline = get_option_tree('home_tagline');
+  } ?>
+
+  <?php if ( isset($home_tagline) ) { ?>
+    <div id="message">
+      <div id="message-wrapper" class="container">
+        <h1><?php echo($home_tagline); ?></h1>
+      </div>
     </div>
-  </div>
+  <?php } ?>
 
   <div id="middle-section">
     <div id="middle-section-wrapper" class="container">
