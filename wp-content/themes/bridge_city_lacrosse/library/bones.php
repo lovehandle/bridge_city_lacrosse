@@ -92,6 +92,110 @@ function bones_register_slider_images() {
 }
 
 /*********************
+ SLIDER META BOX
+*********************/
+
+function sltws_create_meta_box()
+{
+	add_meta_box(
+		'sltws-meta-box-subtitle',
+		__('URL goes here', 'fitness'),
+		'sltws_meta_box_subtitle',
+		'slider',
+		'normal',
+		'high'
+	);
+	
+}
+
+function sltws_meta_box_subtitle()
+{
+	global $meta; sltws_post_meta( $post->ID );
+?>
+
+	<input type="text" name="sltws_meta[subtitle]" value="<?php echo htmlspecialchars ($meta[ 'subtitle' ]); ?>" style="width:99%;" rows="5" /><br />
+	<p><?php _e('Enter a URL here for this slider image to link to.  Leaving this blank will mean the slider image will not link at all.', 'fitness' ); ?></p>
+
+<?php
+
+}
+
+add_action( 'admin_menu', 'sltws_create_meta_box' );
+
+/**
+ * Verify and save meta. Don't save if there is no specific meta, it is a revision,
+ * or the current user can't edit posts.
+ */
+function sltws_save_meta_box( $post_id, $post )
+{
+	global $post, $type;
+
+	$post = get_post( $post_id );
+
+	if( !isset( $_POST[ "sltws_meta" ] ) )
+		return;
+
+	if( $post->post_type == 'revision' )
+		return;
+
+	$meta = apply_filters( 'sltws_post_meta', $_POST[ "sltws_meta" ] );
+
+	foreach( $meta as $key => $meta_box )
+	{
+		$key = 'meta_' . $key;
+		$curdata = $meta_box;
+		$olddata = get_post_meta( $post_id, $key, true );
+
+		if( $olddata == "" && $curdata != "" )
+			add_post_meta( $post_id, $key, $curdata );
+		elseif( $curdata != $olddata )
+			update_post_meta( $post_id, $key, $curdata, $olddata );
+		elseif( $curdata == "" )
+			delete_post_meta( $post_id, $key );
+	}
+
+	do_action( 'sltws_saved_meta', $post );
+}
+
+add_action( 'save_post', 'sltws_save_meta_box', 1, 2 );
+
+// check autosave
+if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+ return $post_id;
+}
+
+/**
+ * Gathers all meta objects attached to a certain posts.
+ * Excludes WordPress internal meta and creates an array of data.
+ */
+function sltws_post_meta( $post_id = '' )
+{
+	global $meta, $post, $wpdb;
+
+	if( empty( $post_id ) )
+		$post_id = $post->ID;
+
+	$meta = array();
+	$custom_field_keys = get_post_custom_keys( $post_id );
+
+	if( $custom_field_keys )
+	{
+		foreach( $custom_field_keys as $key => $value )
+		{
+			$valuet = trim( $value );
+
+			if ( '_' == $valuet{0} )
+				continue;
+
+			$value_short = str_replace( 'meta_', "", $valuet );
+
+			$meta[ $value_short ] = get_post_meta( $post_id, $value, true );
+		}
+	}
+
+	return $meta;
+}
+/*********************
 WP_HEAD GOODNESS
 The default wordpress head is
 a mess. Let's clean it up by
