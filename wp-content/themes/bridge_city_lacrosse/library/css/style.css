@@ -221,6 +221,10 @@ h6 {
 #footer-bottom li {
   color: #7F8084;
 }
+#slider {
+  padding: 20px;
+  min-height: 350px;
+}
 #pre-content {
   height: 100px;
 }
