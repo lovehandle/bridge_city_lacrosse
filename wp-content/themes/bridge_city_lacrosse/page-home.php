@@ -9,6 +9,28 @@ Template Name: Home
 <section id="content" role="main">
   <div id="slider">
     <div id="slider-wrapper" class="container">
+      <ul>
+        <?php
+          $temp = $my_query;
+          $my_query = null;
+          $my_query = new WP_Query('post_type=slider&showposts=10');
+          $my_query->query('post_type=slider&showposts=10');
+        ?>
+            
+        <?php while ( $my_query->have_posts() ) : $my_query->the_post(); sltws_post_meta(); ?>
+          <?php $sliderlink = $meta[ 'subtitle' ] ?> 
+          <li>
+            <?php if ($sliderlink != ('')){ ?> 
+              <a href="<?php echo $sliderlink; ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('slide'); ?></a>
+            <?php } else { ?> 
+              <?php the_post_thumbnail('slide'); ?>
+            <?php } ?>
+          </li>
+        <?php endwhile; ?>
+
+      </ul>
+
+      <?php wp_reset_query(); ?>
 
     </div>
   </div>
