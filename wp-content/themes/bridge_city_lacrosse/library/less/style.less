@@ -1,0 +1,168 @@
+@import "bootstrap/bootstrap.less";
+@import "home.less";
+@import "blog.less";
+
+@accent-color: #D11313;
+@grey-color: #323232;
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  box-shadow:         @style @c;
+  -webkit-box-shadow: @style @c;
+  -moz-box-shadow:    @style @c;
+}
+
+
+body {
+ background: url("/wp-content/themes/bones/library/images/background.jpg");
+ color: #7F8084;
+ font-family: Helvetica Neue, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: @grey-color;
+  font-family: 'Oswald', sans-serif;
+  text-shadow: 0 2px 0 #D4D4D4;
+  text-transform: uppercase;
+}
+
+#header {
+  border-top: 3px solid #fff;
+}
+
+#header-top {
+  background-color: @accent-color;
+  height: 145px;
+}
+
+#header-top-logo {
+  padding-top: 25px;
+  margin: 0;
+}
+
+#header-bottom, #footer-top {
+  height: 50px;
+  background-color: @grey-color;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    text-transform: uppercase;
+    float: left;
+    height: 50px;
+
+    a {
+      color: #FFF;
+      padding: 15px;
+      text-decoration: none;
+      font-size: 11px;
+      font-family: Muli, sans-serif;
+      display: block;
+    }
+
+    &.current_page_item, &:hover {
+      background-color: #bfbfbf;
+
+      a {
+        color: @grey-color;
+        background-color: #bfbfbf;
+      }
+
+    }
+
+    &:hover {
+      ul.sub-menu {
+        opacity: 1;
+        height: auto;
+        transition: opacity 0.5s ease-out;
+        -moz-transition: opacity 0.5s ease-out;
+        -webkit-transition: opacity 0.5s ease-out;
+        -o-transition: opacity 0.5s ease-out;
+      }
+    }
+
+    ul.sub-menu {
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+#header-bottom-nav, #footer-top-nav {
+  float: left;
+}
+
+#header-bottom-search {
+  float: right;
+  margin-top: 8px;
+
+  input {
+    width: 150px;
+  }
+}
+
+#footer-top-social {
+  float: right;
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    &:hover {
+      background-color: @grey-color;
+
+      a {
+        background-color: @grey-color;
+      }
+    }
+  }
+}
+
+#footer {
+  border-bottom: 5px solid @accent-color;
+  margin-top: 50px;
+}
+
+#footer-bottom {
+  min-height: 255px;
+  padding-top: 50px;
+
+  h6 {
+    font-family: 'Muli', sans-serif;
+    font-size: 1em;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    color: #7F8084;
+  }
+}
+
+#pre-content {
+  height: 100px;
+}
+
+#content {
+  min-height: 300px;
+  margin-top: 50px;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid #DDD;
+  margin: 50px 0;
+}
+
+.content {
+  .box-shadow(0 2px 0, #DDD);
+  background-color: white;
+}

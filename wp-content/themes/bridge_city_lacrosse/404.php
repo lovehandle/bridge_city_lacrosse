@@ -1,56 +1,43 @@
-<?php $path = get_template_directory_uri();
-if(!isset($_REQUEST['error']))  $error_code = '404';
-else  $error_code = $_REQUEST['error'];
-?>
-
 <?php get_header(); ?>
 
-<!-- Start of main -->
-<section id="main">
+			<div id="content">
 
-<!-- Start of left content wrapper -->
-<section id="left_content_wrapper">
+				<div id="inner-content" class="wrap clearfix">
 
-<!-- Start of left content -->
-<div id="left_contentsearch">
+					<div id="main" class="eightcol first clearfix" role="main">
 
-<!-- Start of blog wrapper -->
-<div class="blog_wrapper">
+						<article id="post-not-found" class="hentry clearfix">
 
-<!-- Start of posted details -->
-<div class="posted_details">
+							<header class="article-header">
 
-<h1 class="light"><?php _e( 'Page Not Found', 'fitness' ); ?></h1>
+								<h1><?php _e("Epic 404 - Article Not Found", "bonestheme"); ?></h1>
 
-</div><!-- End of posted details -->
+							</header> <!-- end article header -->
 
-<!-- Start of featured text full -->
-<div class="featured_text_full">
-<p><?php _e( 'No worries you probably mistyped something, looked for something that does not exist anymore or just downright broke stuffs - just carry on with the menu at the top!', 'fitness' ); ?></p>
+							<section class="entry-content">
 
-</div><!-- End of featured text full -->
+								<p><?php _e("The article you were looking for was not found, but maybe try looking again!", "bonestheme"); ?></p>
 
-<!-- Start of clear fix --><div class="clear"></div>
+							</section> <!-- end article section -->
 
-</div><!-- End of blog wrapper -->
+							<section class="search">
 
-</div><!-- End of left content -->
+							    <p><?php get_search_form(); ?></p>
 
-</section><!-- End of left content wrapper -->
+							</section> <!-- end search section -->
 
-<!-- Start of right content wrapper -->
-<aside id="right_content_wrapper">
+							<footer class="article-header">
 
-<!-- Start of right content -->
-<div id="right_content">
-<?php get_sidebar ('page'); ?>            
+							    <p><?php _e("This is the 404.php template.", "bonestheme"); ?></p>
 
-</div><!-- End of right content -->
+							</footer> <!-- end article footer -->
 
-</aside><!-- End of right content wrapper -->
+						</article> <!-- end article -->
 
-<!-- Start of clear fix --><div class="clear"></div>
-            
-</section><!-- End of main -->
+					</div> <!-- end #main -->
 
-<?php get_footer (); ?>
+				</div> <!-- end #inner-content -->
+
+			</div> <!-- end #content -->
+
+<?php get_footer(); ?>
