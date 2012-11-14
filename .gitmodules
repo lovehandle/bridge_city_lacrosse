@@ -1,3 +1,6 @@
 [submodule "wp-content/themes/roots"]
 	path = wp-content/themes/roots
 	url = https://github.com/retlehs/roots.git
+[submodule "wp-content/plugins/zomigosh"]
+	path = wp-content/plugins/zomigosh
+	url = git://github.com/rclosner/zomigosh.git
